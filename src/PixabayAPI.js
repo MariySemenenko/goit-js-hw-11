@@ -32,27 +32,27 @@ export class PixabayAPI { //приватні властивості класу
         return data; //повертаю дані відповіді в форматі JSON
     }
 
-    get query() {
+    get query() {//гетер повертає зеачення
         this.#query;
     }
 
-    set query(newQuery) {
+    set query(newQuery) { //сетер встановлює передане значення
         this.#query = newQuery;
     }
 
-    incrementPage() {
+    incrementPage() { //збільшую на 1
         this.#page += 1;
     }
 
-    resetPage() {
+    resetPage() { //скидаю значення на 1
         this.#page = 1;
     }
 
-    setTotal(total) {
+    setTotal(total) {//задаю значення властивості 'totalPages'
         this.#totalPages = total;
     }
 
-    hasMorePhotos() {
+    hasMorePhotos() {//перевіряю чи э фотографії для завантаження
         return this.#page < Math.ceil(this.#totalPages / this.#per_page);
     }
 }

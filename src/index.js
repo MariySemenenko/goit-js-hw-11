@@ -17,7 +17,7 @@ const modalLightboxGallery = new SimpleLightbox('.gallery a', {
 spinnerPlay();
 
 window.addEventListener('load', () => {
-  console.log('All resources finished loading!');
+  // console.log('All resources finished loading!');
 
   spinnerStop();
 });
@@ -159,29 +159,3 @@ function clearPage() {
 refs.form.addEventListener('submit', onSubmitClick);
 refs.btnLoadMore.addEventListener('click', onLoadMore);
 
-//  smooth scrolling
-function scrollPage() {
-  const { height: cardHeight } = document
-    .querySelector('.photo-gallery')
-    .firstElementChild.getBoundingClientRect();
-
-  window.scrollBy({
-    top: cardHeight * 2,
-    behavior: 'smooth',
-  });
-}
-
-//Button smooth scroll up
-
-window.addEventListener('scroll', scrollFunction);
-
-function scrollFunction() {
-  if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
-    refs.btnUpWrapper.style.display = 'flex';
-  } else {
-    refs.btnUpWrapper.style.display = 'none';
-  }
-}
-refs.btnUp.addEventListener('click', () => {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-});
