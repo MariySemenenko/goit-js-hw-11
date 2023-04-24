@@ -1,18 +1,20 @@
 
-export function createMarkup(photos) {
+export function createMarkup(photos) { //У відповіді буде масив зображень 
     return photos
       .map(
-        ({
-          tags,
+        ({  //Кожне зображення описується об'єктом, з наступними властивостями
           webformatURL,
           largeImageURL,
+          tags,
           likes,
           views,
           comments,
           downloads,
         }) => {
           return `
-              <a href='${largeImageURL}' class="card-link js-card-link">
+              <a href='${largeImageURL}' class="card-link js-card-link">       
+
+
               <div class="photo-card">
                 <img class="photo" src="${webformatURL}" alt="${tags}" loading="lazy" />
                 <div class="info">
@@ -27,6 +29,7 @@ export function createMarkup(photos) {
                     </div>
                     
                   </div>
+
                   <p class="info-item">
                     <b>Views</b>
                     ${views}
@@ -44,5 +47,7 @@ export function createMarkup(photos) {
               </a>`;
         }
       )
-      .join('');
+      .join('');//обєднуємо в один рядок
   }
+
+  //добавити тіні на кнопку

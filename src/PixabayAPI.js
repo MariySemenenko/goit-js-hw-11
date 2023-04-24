@@ -3,9 +3,9 @@ import axios from 'axios';
 
 
 axios.defaults.baseURL = 'https://pixabay.com/api/';
-// axios.defaults.headers.common['Authorization'] = 'Client-ID 28194821-49041d995ecd04735d9e20d11';
+// axios.defaults.headers.common['Authorization'] = 'Client-ID 35692363 -35692363-708937b69116888a5fb6ef1bd';
 const API_KEY = '35692363-708937b69116888a5fb6ef1bd';
-
+  //використовую клас PixabayAPI для отримання нанних з сайту Pixabay
 export class PixabayAPI {
     #page = 1;
     #per_page = 40;
