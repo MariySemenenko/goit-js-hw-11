@@ -10,7 +10,7 @@ export class PixabayAPI { //приватні властивості класу
     #page = 1;
     #per_page = 40;
     #query = '';
-    #totalPages = 0;
+    #totalHits = 0;
 
 
     // повертає дані з API сайту Pixabay
@@ -49,10 +49,10 @@ export class PixabayAPI { //приватні властивості класу
     }
 
     setTotal(total) {//задаю значення властивості 'totalPages'
-        this.#totalPages = total;
+        this.#totalHits = total;
     }
 
     hasMorePhotos() {//перевіряю чи э фотографії для завантаження
-        return this.#page < Math.ceil(this.#totalPages / this.#per_page);
+        return this.#page < Math.ceil(this.#totalHits / this.#per_page);
     }
 }

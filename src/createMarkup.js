@@ -1,8 +1,9 @@
 
-export function createMarkup(photos) { //У відповіді буде масив зображень 
+
+export function createMarkup(photos) { //приймаємо масив зображень photos
     return photos
       .map(
-        ({  //Кожне зображення описується об'єктом, з наступними властивостями
+        ({  //Кожне зображення описується наступними властивостями
           webformatURL,
           largeImageURL,
           tags,
